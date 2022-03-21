@@ -1,23 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="src/assets/images/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Frontend Mentor | Interactive Rating Component</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="src/assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Interactive Rating Component</title>
+</head>
 
-    <body class="flex w-full h-screen px-6 py-12">
+<body class="flex w-full h-screen bg-very-dark-blue">
 
-        <main class="flex flex-row w-full h-auto m-auto">
+    <div class="flex-shrink-0 flex-grow-0 w-full my-auto py-12 overflow-hidden">
+        <main class="flex flex-row w-[200%] h-auto transition-transform duration-300" id="carousel">
+
+            <div class="w-1/2 px-6">
+                <div class="container mx-auto p-8 rounded-2xl bg-dark-blue">
+                    <div class="flex w-12 h-12 mb-4 rounded-full bg-button shadow-sm">
+                        <img class="w-4 h-4 m-auto" src="src/assets/images/icon-star.svg" alt="star icon">
+                    </div>
+                    <h1 class="text-2xl font-bold text-white mb-4">How did we do ?</h1>
+                    <p class="text-base font-normal text-medium-grey leading-6 mb-6">Please let us know how we did with
+                        your support request. All feedback is appreciated to help us improve our offering!</p>
+                    <div class="flex flex-row justify-between items-start w-full mb-8">
+                        <div class="rating-input relative w-12 h-12">
+                            <input
+                                class="rating-input absolute z-20 top-0 left-0 w-full h-full rounded-full opacity-0 cursor-pointer"
+                                type="radio" name="rating-option" value="1">
+                            <span
+                                class="rating-button relative z-10 block w-full h-full rounded-full text-base font-bold transition-colors bg-button text-medium-grey text-center leading-[3rem]">1</span>
+                        </div>
+                        <div class="rating-input relative w-12 h-12">
+                            <input
+                                class="rating-input absolute z-20 top-0 left-0 w-full h-full rounded-full opacity-0 cursor-pointer"
+                                type="radio" name="rating-option" value="2">
+                            <span
+                                class="rating-button relative z-10 block w-full h-full rounded-full text-base font-bold transition-colors bg-button text-medium-grey text-center leading-[3rem]">2</span>
+                        </div>
+                        <div class="rating-input relative w-12 h-12">
+                            <input
+                                class="rating-input absolute z-20 top-0 left-0 w-full h-full rounded-full opacity-0 cursor-pointer"
+                                type="radio" name="rating-option" value="3">
+                            <span
+                                class="rating-button relative z-10 block w-full h-full rounded-full text-base font-bold transition-colors bg-button text-medium-grey text-center leading-[3rem]">3</span>
+                        </div>
+                        <div class="rating-input relative w-12 h-12">
+                            <input
+                                class="rating-input absolute z-20 top-0 left-0 w-full h-full rounded-full opacity-0 cursor-pointer"
+                                type="radio" name="rating-option" value="4">
+                            <span
+                                class="rating-button relative z-10 block w-full h-full rounded-full text-base font-bold transition-colors bg-button text-medium-grey text-center leading-[3rem]">4</span>
+                        </div>
+                        <div class="rating-input relative w-12 h-12">
+                            <input
+                                class="rating-input absolute z-20 top-0 left-0 w-full h-full rounded-full opacity-0 cursor-pointer"
+                                type="radio" name="rating-option" value="5">
+                            <span
+                                class="rating-button relative z-10 block w-full h-full rounded-full text-base font-bold transition-colors bg-button text-medium-grey text-center leading-[3rem]">5</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full h-12 rounded-full text-center uppercase leading-[3rem] text-base font-bold tracking-widest transition-colors cursor-not-allowed bg-button text-medium-grey"
+                        id="carousel-button">submit</button>
+                </div>
+            </div>
+
+            <div class="w-1/2 h-auto px-6">
+                <div
+                    class="container mx-auto px-6 py-8 flex flex-col justify-start items-center rounded-2xl bg-dark-blue">
+                    <img class="mb-6" src="src/assets/images/illustration-thank-you.svg" alt="thank you illustration">
+                    <span class="px-4 py-2 mb-6 rounded-full text-base font-normal text-orange bg-button">You selected
+                        <span id="rating-selected"></span> out of 5</span>
+                    <h2 class="text-center text-3xl font-bold text-white mb-4">Thank you!</h2>
+                    <p class="text-center text-base font-normal leading-6 text-medium-grey">We appreciate you taking the
+                        time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+                </div>
+            </div>
 
         </main>
+    </div>
 
-        <script type="module" src="/src/main.ts"></script>
-    </body>
+
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
 
 </html>

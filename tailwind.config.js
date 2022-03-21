@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: '576px',
+      sm: '400px',
     },
     colors: {
       "orange": "hsl(25, 97%, 53%)",
@@ -15,6 +15,7 @@ module.exports = {
       "medium-grey": "hsl(216, 12%, 54%)",
       "dark-blue": "hsl(213, 19%, 18%)",
       "very-dark-blue": "hsl(216, 12%, 8%)",
+      "button": "rgba(255,255,255,0.05)",
     },
     extend: {
       fontFamily: {
