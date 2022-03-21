@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .rating-input:hover ~ .rating-button {
-        @apply bg-orange text-white;
-    }
-    .rating-input:checked ~ .rating-button {
-        @apply bg-medium-grey text-white hover:bg-medium-grey hover:text-white;
-    }
+    .rating-input:hover ~ .rating-button { @apply bg-orange text-white; }
+    .rating-input:checked ~ .rating-button { @apply bg-medium-grey text-white hover:bg-medium-grey hover:text-white; }
 }
 
