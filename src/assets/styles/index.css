@@ -19,6 +19,16 @@
         transform: rotateY(-180deg);
     }
 
+    .visually-hidden {
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
+    }
+
     .rating-label:hover { @apply bg-orange; }
     .rating-label:hover .rating-label-text { @apply text-white; }
 
