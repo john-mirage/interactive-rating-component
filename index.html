@@ -13,20 +13,20 @@
 
 <body class="flex flex-row justify-center items-center w-full min-h-screen px-6 py-10 bg-very-dark-blue">
 
-    <main class="max-w-card h-auto bg-transparent perspective">
+    <form method="post" class="max-w-card h-auto bg-transparent perspective" autocomplete="off">
 
         <!-- Rating options -->
-        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-1" value="1" autocomplete="off">
-        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-2" value="2" autocomplete="off">
-        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-3" value="3" autocomplete="off">
-        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-4" value="4" autocomplete="off">
-        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-5" value="5" autocomplete="off">
+        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-1" value="1">
+        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-2" value="2">
+        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-3" value="3">
+        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-4" value="4">
+        <input class="visually-hidden" type="radio" name="rating-option" id="rating-input-5" value="5">
 
         <!-- Rating pannel flip trigger -->
-        <input class="visually-hidden" aria-hidden="true" type="checkbox" name="rating-submit" id="rating-submit" autocomplete="off">
+        <input class="visually-hidden" aria-hidden="true" type="checkbox" name="rating-submit" id="rating-submit">
 
         <!-- Rating pannel -->
-        <div class="relative w-full h-auto preserve transition-transform duration-500" id="rating-pannel">
+        <main class="relative w-full h-auto preserve transition-transform duration-500" id="rating-pannel">
 
             <!-- Rating selection -->
             <div class="relative z-30 w-full h-auto hidden-backface px-6 py-8 sm:px-9 sm:py-8 rounded-2xl sm:rounded-4xl bg-gradient-to-tr from-background-from to-background-to" id="rating-pannel-front">
@@ -81,8 +81,9 @@
                 <p class="text-center text-base font-normal text-light-grey leading-6">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
             </div>
 
-        </div>
-    </main>
+        </main>
+
+    </form>
 
     <script type="module" src="/src/main.ts"></script>
 </body>
