@@ -1,7 +1,7 @@
 import "./assets/styles/index.css";
 
-const ratingSubmitInput = document.getElementById("rating-submit");
-const ratingInputs = document.getElementsByClassName("rating-inputs");
+const ratingSubmitInput = document.getElementById("rating-submit") as HTMLInputElement;
+const ratingInputs = document.getElementsByClassName("rating-inputs") as HTMLCollectionOf<HTMLInputElement>;
 
 let inputsAreDisabled = false;
 
@@ -15,10 +15,11 @@ function disableInputs() {
     }
 }
 
-ratingSubmitInput?.addEventListener("keyup", (event) => {
+ratingSubmitInput?.addEventListener("keyup", (event: KeyboardEvent) => {
     event.preventDefault();
     if (event.code === "Enter") {
-        event.target.checked = true;
+        const input = event.target as HTMLInputElement;
+        input.checked = true;
         disableInputs();
     }
 });
